@@ -49,3 +49,36 @@ function decode (word) {
 
 console.log (decode('craft') + decode('block') + decode('argon') + decode('meter') + decode ('bells') + decode('brown') 
 + decode('croon') + decode('droop'));
+
+function howManyDays (month, leapYear){
+    if (!month){
+        throw new Error("Must provide a valid month.");
+    }
+    else if ((month === 'February') && (leapYear === true)){
+        console.log("February has 29 days!");
+    }
+    else{
+        switch(month){
+            case 'January':
+            case 'March':
+            case 'May':
+            case 'July':
+            case 'August':
+            case 'October':
+            case 'December':
+                console.log(`${month} has 31 days!`);
+                break;
+            case 'April':
+            case 'June':
+            case 'September':
+            case 'November':
+                console.log(`${month} has 30 days!`);
+                break;
+            case 'February':
+                console.log(`February has 28 days!`)
+                break;
+        }
+    }
+}
+
+howManyDays("February", true);
