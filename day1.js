@@ -5,15 +5,14 @@ function yearOfBirth (age){
     return yearOfBirth;
 }
 function whoAmI (name, age){
-    if (typeof(age !== Number)){
+    if ((!name) || (!age)){
+        console.error('Arguments not valid');
+    }
+    else if (typeof(age !== Number)){
         throw new Error("age is not a number")
     }
     else if (age < 0){
         throw new Error("Age cant be negative");
-    }
-    else if ((!name) || (!age)){
-            console.error('Arguments not valid');
-        
     }
     else{   
     let yob = yearOfBirth(age);
