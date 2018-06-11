@@ -82,3 +82,50 @@ function howManyDays (month, leapYear){
 }
 
 howManyDays("February", true);
+
+function rockPaperScissors (num){
+    if ((num < 1) || (num > 3)){
+        console.error("Invalid Entry. Please choose a number between 1 and 3.");
+    }
+    else{
+    let playerChoice = num;
+    const randomNo = Math.floor(Math.random() *3) +1;
+
+    if (playerChoice === 1){
+        if (randomNo ===1) {
+            console.log ("It's a tie!");
+        }
+        else if (randomNo === 2){
+            console.log ("You lose :(");
+        }
+        else if (randomNo === 3){
+            console.log ("You win :)");
+        }
+    }
+    else if (playerChoice === 2){
+        if (randomNo ===2) {
+            console.log ("It's a tie!");
+        }
+        else if (randomNo === 3){
+            console.log ("You lose :(");
+        }
+        else if (randomNo === 1){
+            console.log ("You win :)");
+        }
+    }
+    else if (playerChoice === 3){
+        if (randomNo ===3) {
+            console.log ("It's a tie!");
+        }
+        else if (randomNo === 1){
+            console.log ("You lose :(");
+        }
+        else if (randomNo === 2){
+            console.log ("You win :)");
+        }
+    }
+return rockPaperScissors;
+    }
+}
+    
+    rockPaperScissors(2);
