@@ -5,7 +5,10 @@ function yearOfBirth (age){
     return yearOfBirth;
 }
 function whoAmI (name, age){
-    if (age < 0){
+    if (typeof(age !== Number)){
+        throw new Error("age is not a number")
+    }
+    else if (age < 0){
         throw new Error("Age cant be negative");
     }
     else if ((!name) || (!age)){
@@ -18,7 +21,7 @@ function whoAmI (name, age){
     console.log(`I was born in ${yob}`)
     }
 }
-let age = 35;
+let age = "35";
 let name = null;
 
 whoAmI (name, age);
