@@ -8,7 +8,7 @@ function whoAmI (name, age){
     if ((!name) || (!age)){
         console.error('Arguments not valid');
     }
-    else if (typeof(age !== Number)){
+    else if (typeof age !== "number"){
         throw new Error("age is not a number")
     }
     else if (age < 0){
@@ -20,7 +20,7 @@ function whoAmI (name, age){
     console.log(`I was born in ${yob}`)
     }
 }
-let age = "35";
+let age = 35;
 let name = null;
 
-whoAmI (name, age);
+whoAmI ("bob", 35);
